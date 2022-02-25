@@ -20,6 +20,7 @@ When we compile a python program, we cannot see .pyc file produced by python com
 We can use python compiler to compile the program as:
 ~python first.py
 (python is the command to call the python compiler)
+
 Also, to create .pyc file separately from the source code, we can use the following code: 
 ~python -m py_compile first.py
 
