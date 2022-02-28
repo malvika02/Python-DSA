@@ -7,3 +7,6 @@ def MergeSort(arr):
     return m
 m = [12,32,43,41,33,1,9]
 print(m)
+
+
+            
