@@ -1,3 +1,4 @@
+import random
 def selection_sort(arr):
     
     for i in range(len(arr)):
@@ -12,7 +13,9 @@ def selection_sort(arr):
                 min = i
                 
     return arr
-array = [34, 45, 4, 12, 32, 69 ]
+# array = [34, 45, 4, 12, 32, 69 ]
+array = [random.randint(-4,100) for i in range(10)]
+print(array)
 print(selection_sort(array))
 
 
