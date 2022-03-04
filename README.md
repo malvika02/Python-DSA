@@ -1,9 +1,7 @@
-PYTHON
 
-1. Python is a general purpose,high level and interpreted programming language.
-2. It is an interactive programming language.
-3. Simple syntax
-4. Python was developed by Guido Van Rossum in 1991 at The National Research Institute for Mathematics and Computer Science in the Netherlands.
+
+Python
+A general purpose,high level and interpreted programming language, was developed by Guido Van Rossum in 1991 at The National Research Institute for Mathematics and Computer Science in the Netherlands.
 
 Execution
 
