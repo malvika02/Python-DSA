@@ -8,5 +8,8 @@ def quickSort(arr, left, right):
         # elements that are greater than the pivot element
         quickSort(arr, partiton_pos+1, right)
 
+# declare partition function
+# returns the index of pivot element after the first step of quick sort.
 def partition(arr, left, right):
+    i = left
 
