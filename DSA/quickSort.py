@@ -20,10 +20,10 @@ def partition(arr, left, right):
             i += 1
         while j > left and arr[j] >= pivot:
             j -= 1
-    if i < j:
-        temp = arr[i]
-        arr[i] = arr[j]
-        arr[j] = temp
+        if i < j:
+            temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
     if arr[i] > pivot:
         temp = arr[i]
         arr[i] = arr[right]
@@ -31,7 +31,7 @@ def partition(arr, left, right):
     return i
 
 array = [random.randint(-2,100) for i in range(10)]
-
+# array = [23, 43, 3, 56, 22, 11, 46, 98, 9]
 quickSort(array, 0, len(array)-1)
 print(array)
 
