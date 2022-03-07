@@ -36,6 +36,9 @@ class linkedList:
             itr = itr.next
 
         itr.next = Node(data, None)
+    # input values it will create a new list
+    def insert_values(self, data_list):
+        self.head = None
 
 
 
