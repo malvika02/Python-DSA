@@ -41,7 +41,14 @@ class linkedList:
         self.head = None
         for data in data_list:
             self.insert_at_end(data)
-
+    
+    def get_length(self):
+        count = 0
+        itr = self.head
+        while itr:
+            count += 1
+            itr = itr.next
+        return count
 
 
 
@@ -53,4 +60,5 @@ if __name__ == '__main__':
     # ll.insert_at_end(3)
     ll.insert_at_end(["India", "America", "Australia", "Canada", "UAE"])
     ll.print()
+    print("length", ll.get_length)
 
