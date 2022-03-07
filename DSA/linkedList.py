@@ -15,11 +15,36 @@ class linkedList:
         if self.head is None:
             print("Linked List is empty")
             return
-        # temperoray variable to iterate the elements in the linked list one by one
+        # temporary variable to iterate the elements in the linked list one by one
         itr = self.head
         llstr = ""
         while itr:
-            llstr += str(itr.data) + '--->'
+            llstr += str(itr.data) + ' ---> '
             itr = itr.next
 
         print(llstr)
+
+    def insert_at_end(self, data):
+        # when there is no elements present in the list
+        if self.head is None:
+            self.head = Node(data, None)
+            return
+        # when there are elements present in list
+        # temporary variable to iterate into the list and get to the last element
+        itr = self.head
+        while itr.next:
+            itr = itr.next
+
+        itr.next = Node(data, None)
+
+
+
+
+if __name__ == '__main__':
+    ll = linkedList()
+    ll.insert_at_beginning(32)
+    ll.insert_at_beginning(222)
+    ll.insert_at_end(2445)
+    ll.insert_at_end(3)
+    ll.print()
+
