@@ -39,15 +39,18 @@ class linkedList:
     # input values it will create a new list
     def insert_values(self, data_list):
         self.head = None
+        for data in data_list:
+            self.insert_at_end(data)
 
 
 
 
 if __name__ == '__main__':
     ll = linkedList()
-    ll.insert_at_beginning(32)
-    ll.insert_at_beginning(222)
-    ll.insert_at_end(2445)
-    ll.insert_at_end(3)
+    # ll.insert_at_beginning(32)
+    # ll.insert_at_beginning(222)
+    # ll.insert_at_end(2445)
+    # ll.insert_at_end(3)
+    ll.insert_at_end(["India", "America", "Australia", "Canada", "UAE"])
     ll.print()
 
