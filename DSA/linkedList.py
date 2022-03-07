@@ -55,7 +55,21 @@ class linkedList:
             raise Exception("Invalid index")
         
         if index == 0:
+            # pointing to the next element
             self.head = self.head.next
+            return
+        # In linked list we have to maintain the count manually
+        count = 0
+        itr = self.head
+        while itr:
+            # we stop at the previous element
+            if count == index-1:
+                # previous element next link is pointing to this particular index that i am trying to remove
+                # once the element is removed it will point to the next element next
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            count += 1
 
 
 if __name__ == '__main__':
