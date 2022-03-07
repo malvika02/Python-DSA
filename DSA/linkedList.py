@@ -50,15 +50,22 @@ class linkedList:
             itr = itr.next
         return count
 
+    def remove(self, index):
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+        
+        if index == 0:
+            self.head = self.head.next
 
 
 if __name__ == '__main__':
     ll = linkedList()
-    # ll.insert_at_beginning(32)
-    # ll.insert_at_beginning(222)
-    # ll.insert_at_end(2445)
-    # ll.insert_at_end(3)
+    ll.insert_at_beginning(32)
+    ll.insert_at_beginning(222)
+    ll.insert_at_end(2445)
+    ll.insert_at_end(3)
     ll.insert_at_end(["India", "America", "Australia", "Canada", "UAE"])
+    ll.remove(2)
     ll.print()
-    print("length", ll.get_length)
+    print("length", ll.get_length())
 
