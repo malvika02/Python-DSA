@@ -1,3 +1,6 @@
+from logging import raiseExceptions
+
+
 class Node:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -70,7 +73,23 @@ class linkedList:
                 break
             itr = itr.next
             count += 1
+    
+    # insert values at a particular index
+    def insert_at(self, index, data):
+        if index<0 or index>self.get_length():
+            raise Exception("Invalid Index")
+        if index == 0:
+            self.insert_at_beginning(data)
+            return
 
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index-1:
+                node = Node(data, itr.next)
+
+            itr = itr.next
+            count += 1
 
 if __name__ == '__main__':
     ll = linkedList()
@@ -80,6 +99,9 @@ if __name__ == '__main__':
     ll.insert_at_end(3)
     ll.insert_at_end(["India", "America", "Australia", "Canada", "UAE"])
     ll.remove(2)
+    ll.remove(12)
+    # insert at a particular index(index, "value")
+    ll.insert_at(0, "[Hello, everyone]")
     ll.print()
     print("length", ll.get_length())
 
