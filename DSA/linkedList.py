@@ -86,8 +86,10 @@ class linkedList:
         itr = self.head
         while itr:
             if count == index-1:
+                # pass
                 node = Node(data, itr.next)
-
+                itr.next = node
+                break
             itr = itr.next
             count += 1
 
@@ -99,9 +101,10 @@ if __name__ == '__main__':
     ll.insert_at_end(3)
     ll.insert_at_end(["India", "America", "Australia", "Canada", "UAE"])
     ll.remove(2)
-    ll.remove(12)
+    # ll.remove(12)
     # insert at a particular index(index, "value")
     ll.insert_at(0, "[Hello, everyone]")
+    ll.insert_at(5, " ")
     ll.print()
     print("length", ll.get_length())
 
