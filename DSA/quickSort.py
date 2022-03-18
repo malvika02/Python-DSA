@@ -41,8 +41,8 @@ print(array)
 end = time.perf_counter()
 time_elapsed = end - start
 
-print(start)
-print(end)
+print(f"when it started {start}")
+print(f"when it ended {end}")
 
 
 
