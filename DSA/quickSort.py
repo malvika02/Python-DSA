@@ -1,4 +1,7 @@
 # QuickSort [C.A.R Hoare]
+import time
+from tracemalloc import start
+start = time.perf_counter()
 import random
 def quickSort(arr, left, right):
     if left < right:
@@ -34,6 +37,12 @@ array = [random.randint(-2,100) for i in range(10)]
 # array = [23, 43, 3, 56, 22, 11, 46, 98, 9]
 quickSort(array, 0, len(array)-1)
 print(array)
+
+end = time.perf_counter()
+time_elapsed = end - start
+
+print(start)
+print(end)
 
 
 
