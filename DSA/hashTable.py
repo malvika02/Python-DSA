@@ -23,7 +23,6 @@ class HashTable:
     # def get(self, key):
     #     h = self.get_hash(key)
     #     return self.arr[h]
-h = HashTable()
 
 
 
