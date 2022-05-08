@@ -1,16 +1,17 @@
 
-public class Fibo(){
-    public static void main(String[] args){
-        System.out.println(fibo(7));
-        
-    
-    
+public class fibo
+{
+    static int Fibo(int n){
+        //base condition
+        if (n < 2){
+            return n;
+        }
+        return Fibo(n-1) + Fibo(n-2);
     }
+    public static void main(String[] args){
+        int n =5;
+        System.out.println(Fibo(n));
+    }
+} 
 
-static int fibo(int n){
-    //base condition
-    if (n < 2){
-        return n;
-    } 
-    return fibo(n-1) + fibo(n-2);
-}
+    
